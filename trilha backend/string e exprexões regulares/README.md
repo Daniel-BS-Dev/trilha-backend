@@ -8,3 +8,8 @@
 - Replace('r','e') - troca o r pelo o e
 - ToUpper() - transforma minha string em maiuscula
 - ToLower() - transforma em minusculas
+- StartsWith("") - para saber se começa com o argumento digitado entre parenteses, retorna um true
+- EndsWith() - saber se termina com o argumento digitado
+- Contains() - para saber se o a string contém o argumento digitado
+- Match resultado = Regex.Match(texteDeTeste, padrao) console.write(resultado.Value) - ver o resutado que atende ao meu padrão
+- Regex.IsMatch(testeDeTeste, ) - Primeiro argumento qual texto eu quero visitar, segundo argumento qual o padrão retorna pra mim verdadeiro ou falso
