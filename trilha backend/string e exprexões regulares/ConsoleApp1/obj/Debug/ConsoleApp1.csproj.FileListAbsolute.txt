@@ -1,0 +1,7 @@
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\workspace\trilha backend\trilha backend\string e exprexões regulares\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
