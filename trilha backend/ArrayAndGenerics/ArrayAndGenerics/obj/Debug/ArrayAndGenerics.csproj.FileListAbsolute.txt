@@ -1,0 +1,7 @@
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\bin\Debug\ArrayAndGenerics.exe.config
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\bin\Debug\ArrayAndGenerics.exe
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\bin\Debug\ArrayAndGenerics.pdb
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\obj\Debug\ArrayAndGenerics.csproj.AssemblyReference.cache
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\obj\Debug\ArrayAndGenerics.csproj.CoreCompileInputs.cache
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\obj\Debug\ArrayAndGenerics.exe
+C:\workspace\trilha backend\trilha backend\ArrayAndGenerics\ArrayAndGenerics\obj\Debug\ArrayAndGenerics.pdb
