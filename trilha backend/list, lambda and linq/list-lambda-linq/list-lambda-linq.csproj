@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3104D0B5-A445-4134-944B-888E15F3AE6C}</ProjectGuid>
+    <ProjectGuid>{8C1F1D08-C6DB-4EB6-8AC8-4F8E81B1595D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ArrayAndGenerics</RootNamespace>
-    <AssemblyName>ArrayAndGenerics</AssemblyName>
+    <RootNamespace>list_lambda_linq</RootNamespace>
+    <AssemblyName>list-lambda-linq</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeGenerics.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ArrayAndGenerics
 {
-    class TypeGenerics
+    class TypeGenerics<T>
     {
+        private T[] _items;
+        private int _nextPosition;
+
+
+        public T Length()
+        {
+            return _items[1];
+        }
+
+        public void Add(T index)
+        {
+           _items[_nextPosition] = index;
+        }
     }
 }
