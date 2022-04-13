@@ -1,0 +1,7 @@
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\bin\Debug\list-lambda-linq.exe.config
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\bin\Debug\list-lambda-linq.exe
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\bin\Debug\list-lambda-linq.pdb
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\obj\Debug\list-lambda-linq.csproj.AssemblyReference.cache
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\obj\Debug\list-lambda-linq.csproj.CoreCompileInputs.cache
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\obj\Debug\list-lambda-linq.exe
+C:\workspace\trilha backend\trilha backend\list, lambda and linq\list-lambda-linq\obj\Debug\list-lambda-linq.pdb
