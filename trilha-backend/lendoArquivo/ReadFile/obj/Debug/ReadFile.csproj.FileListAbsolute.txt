@@ -1,0 +1,21 @@
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\bin\Debug\ReadFile.exe.config
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\bin\Debug\ReadFile.exe
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\bin\Debug\ReadFile.pdb
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\obj\Debug\ReadFile.csproj.AssemblyReference.cache
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\obj\Debug\ReadFile.csproj.CoreCompileInputs.cache
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\obj\Debug\ReadFile.exe
+C:\workspace\trilha backend\trilha backend\lendo arquivo\ReadFile\obj\Debug\ReadFile.pdb
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\bin\Debug\ReadFile.exe.config
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\bin\Debug\ReadFile.exe
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\bin\Debug\ReadFile.pdb
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.csproj.AssemblyReference.cache
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.csproj.CoreCompileInputs.cache
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.exe
+C:\workspace\trilha backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.pdb
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\bin\Debug\ReadFile.exe.config
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\bin\Debug\ReadFile.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\bin\Debug\ReadFile.pdb
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.csproj.AssemblyReference.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.csproj.CoreCompileInputs.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\ReadFile\obj\Debug\ReadFile.pdb
