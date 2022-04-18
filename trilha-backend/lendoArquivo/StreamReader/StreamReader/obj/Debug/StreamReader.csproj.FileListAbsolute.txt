@@ -1,0 +1,7 @@
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\bin\Debug\StreamReader.exe.config
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\bin\Debug\StreamReader.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\bin\Debug\StreamReader.pdb
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\obj\Debug\StreamReader.csproj.AssemblyReference.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\obj\Debug\StreamReader.csproj.CoreCompileInputs.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\obj\Debug\StreamReader.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\StreamReader\StreamReader\obj\Debug\StreamReader.pdb
