@@ -1,0 +1,7 @@
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\obj\Debug\WrittenBinary.csproj.AssemblyReference.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\obj\Debug\WrittenBinary.csproj.CoreCompileInputs.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\bin\Debug\WrittenBinary.exe.config
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\bin\Debug\WrittenBinary.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\bin\Debug\WrittenBinary.pdb
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\obj\Debug\WrittenBinary.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\WrittenBinary\obj\Debug\WrittenBinary.pdb
