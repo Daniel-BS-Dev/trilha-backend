@@ -1,0 +1,7 @@
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\bin\Debug\UsingStreamDeEntrance.exe.config
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\bin\Debug\UsingStreamDeEntrance.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\bin\Debug\UsingStreamDeEntrance.pdb
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\obj\Debug\UsingStreamDeEntrance.csproj.AssemblyReference.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\obj\Debug\UsingStreamDeEntrance.csproj.CoreCompileInputs.cache
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\obj\Debug\UsingStreamDeEntrance.exe
+C:\workspace\trilha-backend\trilha-backend\lendoArquivo\UsingStreamDeEntrance\obj\Debug\UsingStreamDeEntrance.pdb
