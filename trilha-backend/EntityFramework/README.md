@@ -1,17 +1,77 @@
-# List, Lambda and Linq
+# Insalando o Entity
 
-## List
-- Add() - adiciona
-- Remove() - remove
-- Count() - conta os items da lista
-- Sort() - ordena numero
+## Criando um banco de dados
+- exibir -> pesquisador de objetos do sql server -> sql server -> localdb -> banco de dados -> butão direto -> adicionar novo banco de dados
 
-## Pegando a conta que não está null
+## Instalando
+- Microsoft.EntityFrameworkCore.SqlServer versão 3.1.24
 
-- var contasNaoNulas = contas.Where(conta => conta.Numero); - Pegando a conta que não esta null
+## Usando o Entity
+### criar o Context
+````
+using System;
+using Microsoft.EntityFrameworkCore;
 
-## Usando o OrderBy
-- var contasOrdenadas = contasNaoNulas.OrderBy(conta => conta.Numero);
+namespace Alura.Loja.Testes.ConsoleApp
+{
+    internal class LojaContext : DbContext
+    {
+        public DbSet<Produto> Produtos { get; set; }
 
-## Usando o where e o orderBy
-- var contasOrdenadas = contas.Where(conta => null).OrderBy(conta => conta.Numero); - Trazendo as contas não null e ordenada por numero
+        // sobreescrevendo o metodo. metodo de configuração
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            // dizendo a minha maquina que quero usar o banco de dados. se caminho server... vem da minha classe dao
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=LojaDB;Trusted_Connection=true;"); 
+        }
+    }
+}
+``````
+### Metodo Para adicionar
+````
+ private static void GravarUsandoEntity()
+        {
+            Produto p = new Produto();
+            p.Nome = "Harry Potter e a Ordem da Fênix";
+            p.Categoria = "Livros";
+            p.Preco = 19.89;
+
+            using (var context = new LojaContext())
+            {
+                context.Produtos.Add(p);
+                context.SaveChanges();
+            }
+        }
+ ``````
+ 
+### Metodo para adicionar
+````
+private static void Recuperar()
+        {
+            using(var repo = new LojaContext())
+            {
+                IList<Produto> produtos = repo.Produtos.ToList();
+                foreach(var item in produtos)
+                {
+                    Console.WriteLine(item.Nome);
+                }
+            }
+        }
+
+````
+
+### Excluindo um produto
+``````
+  private static void excluir()
+        {
+            using (var repo = new LojaContext())
+            {
+                IList<Produto> produtos = repo.Produtos.ToList();
+                foreach (var item in produtos)
+                {
+                    repo.Produtos.Remove(item);
+                }
+                repo.SaveChanges();
+            }
+        }
+``````
