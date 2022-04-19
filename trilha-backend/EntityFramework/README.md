@@ -75,3 +75,37 @@ private static void Recuperar()
             }
         }
 ``````
+
+### Update Produtos
+````
+ private static void Atualizar()
+        {
+            GravarUsandoEntity();
+            Recuperar();
+
+            using(var repo = new LojaContext())
+            {
+                Produto p = repo.Produtos.First();
+                p.Nome = "Cassine Royale - Editar";
+                repo.Produtos.Update(p);
+                repo.SaveChanges();
+            }
+            Recuperar();
+        }
+``````
+
+## Fazendo o acesso aos dados com o entity
+- Primeiro passo criar uma Interface
+### classe produtoDAO
+````
+ interface IProdutoDAO
+    {
+        void Adicionar(Produto p);
+        void Atualizar(Produto p);
+        void Remover(Produto p);
+        IList<Produto> Produto(Produto p);
+
+    }
+``````
+- agora minha classe produtoDao deve implementar de IProductDAO
+- criar uma classe para implementar o IProduto com o entity
