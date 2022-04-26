@@ -252,6 +252,12 @@ using(var context = new LojaContext())
    context.Produtos.Add(newProduct);
    context.SaveChanges();
 ``````
+* Removendo o produto
+````
+ var p1 = products.First();
+ context.Produtos.Remove(p1);
+ context.SaveChanges();
+ ``````
 
 
 
