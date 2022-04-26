@@ -1,4 +1,4 @@
-# Insalando o Entity
+# Instalando o Entity
 
 ## Criando um banco de dados
 - exibir -> pesquisador de objetos do sql server -> sql server -> localdb -> banco de dados -> butão direto -> adicionar novo banco de dados
