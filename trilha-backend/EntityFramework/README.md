@@ -60,6 +60,19 @@ private static void Recuperar()
 
 ````
 
+### Criando a interface IProdutoDAO
+````
+interface IProdutoDAO
+    {
+        void Adicionar(Produto p);
+        void Atualizar(Produto p);
+        void Remover(Produto p);
+        IList<Produto> Produtos();
+
+    }
+``````
+* produtoDAO deve implementar essa interface
+
 ### Excluindo um produto
 ``````
   private static void excluir()
