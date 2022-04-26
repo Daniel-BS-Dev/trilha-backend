@@ -258,7 +258,10 @@ using(var context = new LojaContext())
  context.Produtos.Remove(p1);
  context.SaveChanges();
  ``````
-
+## Migração da aplicação para entity
+* Importar o pacote Microsoft.EntityFrameworkCore.Tools versão 1.1.1
+* Add-Migration nome
+* Update-Database 
 
 
 
