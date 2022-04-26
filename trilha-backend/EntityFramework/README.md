@@ -59,36 +59,6 @@ private static void Recuperar()
         }
 
 ````
-
-### Criando a interface IProdutoDAO
-````
-interface IProdutoDAO
-    {
-        void Adicionar(Produto p);
-        void Atualizar(Produto p);
-        void Remover(Produto p);
-        IList<Produto> Produtos();
-
-    }
-``````
-* produtoDAO deve implementar essa interface
-
-### Excluindo um produto
-``````
-  private static void excluir()
-        {
-            using (var repo = new LojaContext())
-            {
-                IList<Produto> produtos = repo.Produtos.ToList();
-                foreach (var item in produtos)
-                {
-                    repo.Produtos.Remove(item);
-                }
-                repo.SaveChanges();
-            }
-        }
-``````
-
 ### Update Produtos
 ````
  private static void Atualizar()
@@ -105,6 +75,143 @@ interface IProdutoDAO
             }
             Recuperar();
         }
+``````
+
+### Excluindo um produto
+``````
+  private static void excluir()
+        {
+            using (var repo = new LojaContext())
+            {
+                IList<Produto> produtos = repo.Produtos.ToList();
+                foreach (var item in produtos)
+                {
+                    repo.Produtos.Remove(item);
+                }
+                repo.SaveChanges();
+            }
+        }
+``````
+## Organizando o projeto com o DAO
+### Criando a interface IProdutoDAO
+````
+interface IProdutoDAO
+    {
+        void Adicionar(Produto p);
+        void Atualizar(Produto p);
+        void Remover(Produto p);
+        IList<Produto> Produtos();
+
+    }
+``````
+* produtoDAO deve implementar essa interface
+
+### Classe ProdutoDaoEntity herdanando produtoDAO
+````
+  class ProdutoDAOEntity : IProdutoDAO, IDisposable
+    {
+        private LojaContext contexto;
+
+        // criando uma instancia
+        public ProdutoDAOEntity()
+        {
+            this.contexto = new LojaContext();
+        }
+
+        public void Adicionar(Produto p)
+        {
+            contexto.Produtos.Add(p);
+            contexto.SaveChanges();
+        }
+
+        public void Atualizar(Produto p)
+        {
+            contexto.Produtos.Update(p);
+            contexto.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            contexto.Dispose();
+        }
+
+        public IList<Produto> Produtos()
+        {
+            return contexto.Produtos.ToList();
+        }
+
+        public void Remover(Produto p)
+        {
+            contexto.Produtos.Remove(p);
+            contexto.SaveChanges();
+        }
+
+    }
+````
+
+* No programa eu vou substituir lojaContext por ProdutoDAOEntity
+### Adicionar
+````
+    private static void GravarUsandoEntity()
+        {
+            Produto p = new Produto();
+            p.Nome = "Harry Potter e a Ordem da Fênix";
+            p.Categoria = "Books";
+            p.Preco = 19.89;
+
+            using (var context = new ProdutoDAOEntity())
+            {
+                context.Adicionar(p);
+            }
+        }
+````
+### Metodo para mostrar a lista de nome
+````
+   private static void Recuperar()
+        {
+            using (var repo = new ProdutoDAOEntity())
+            {
+                IList<Produto> produtos = repo.Produtos();
+                foreach (var item in produtos)
+                {
+                    Console.WriteLine(item.Nome);
+                }
+            }
+        }
+````
+### Update Produtos
+````
+ private static void Atualizar()
+        {
+            GravarUsandoEntity();
+            Recuperar();
+
+            using (var repo = new ProdutoDAOEntity())
+            {
+                Produto p = repo.Produtos().First();
+                p.Nome = "Cassine Royale - Editar";
+                repo.Atualizar(p);
+            
+            }
+            Recuperar();
+        }
+``````
+
+### Excluindo um produto
+``````
+     private static void excluir()
+        {
+            using (var repo = new ProdutoDAOEntity())
+            {
+                IList<Produto> produtos = repo.Produtos();
+                foreach (var item in produtos)
+                {
+                    repo.Remover(item);
+                }
+                
+            }
+        }
+
 ``````
 
 ## Fazendo o acesso aos dados com o entity
