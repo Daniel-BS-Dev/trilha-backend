@@ -44,7 +44,7 @@ namespace Alura.Loja.Testes.ConsoleApp
         }
  ``````
  
-### Metodo para adicionar
+### Metodo para mostrar a lista de nome
 ````
 private static void Recuperar()
         {
