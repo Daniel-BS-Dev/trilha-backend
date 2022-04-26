@@ -213,19 +213,49 @@ interface IProdutoDAO
         }
 
 ``````
-
-## Fazendo o acesso aos dados com o entity
-- Primeiro passo criar uma Interface
-### classe produtoDAO
+### Apagei tudo e fiz um novo metodo
+* Atualizando o primeiro nome do banco
 ````
- interface IProdutoDAO
+using(var context = new LojaContext())
+{
+    var products = context.Produtos.ToList();
+    foreach(var p in products)
     {
-        void Adicionar(Produto p);
-        void Atualizar(Produto p);
-        void Remover(Produto p);
-        IList<Produto> Produto(Produto p);
-
+       Console.WriteLine(p);
     }
+
+     var p1 = products.First();
+     p1.Nome = "Daniel";
+     
+      p1 = products.Last();
+      p1.Nome = "The Back";
+
+     context.SaveChanges();
+     Console.WriteLine("===============");
+     products = context.Produtos.ToList();
+     foreach (var p in products)
+     {
+      Console.WriteLine(p);
+     }
+}
+````
+
+* Adicionar o novo produto
+````
+ // adiciando um novo produto
+ var newProduct = new Produto()
+  {
+     Nome = "Desinfetante",
+     Categoria = "limpeza",
+     Preco = 2.99
+   };
+   context.Produtos.Add(newProduct);
+   context.SaveChanges();
 ``````
-- agora minha classe produtoDao deve implementar de IProductDAO
-- criar uma classe para implementar o IProduto com o entity
+
+
+
+
+
+
+
