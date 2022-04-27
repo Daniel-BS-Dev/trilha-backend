@@ -352,7 +352,6 @@ public Promocao Promocao {get; set;}
 * LojaContext
 ````
  public DbSet<Promocao> Promocoes { get; set; }
-`````
 
 // Criando a chave composta da minha classe PromocaoProduto 
 
