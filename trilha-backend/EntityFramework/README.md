@@ -354,8 +354,8 @@ public Promocao Promocao {get; set;}
  public DbSet<Promocao> Promocoes { get; set; }
 `````
 
-* Criando a chave composta da minha classe PromocaoProduto 
-````
+// Criando a chave composta da minha classe PromocaoProduto 
+
 protected override void OnModelCreating(ModelBuilder modelBuilder){
  modelBuilder.Entity<PromocaoProduto>().HasKey(pp => new { pp.PromocaoId, pp.ProdutoId});
  base.OnModelCreating(modelBuilder);
