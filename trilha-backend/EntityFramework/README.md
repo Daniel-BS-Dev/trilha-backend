@@ -260,7 +260,7 @@ using(var context = new LojaContext())
  ``````
 ## Migração da aplicação para entity
 ### Adicionar mais campos a classe
-```````
+````
  internal class Produto
     {
         public int Id { get; internal set; }
@@ -272,7 +272,7 @@ using(var context = new LojaContext())
     {
         return $"Produto: {this.Id}, {this.Nome}, {this.Categoria}, {this.PrecoUnitario}";
     }
-``````
+`````
 ### Remover a classe ProdutoDAO
 * Importar o pacote Microsoft.EntityFrameworkCore.Tools versão 1.1.1
 * Add-Migration nome
@@ -292,7 +292,7 @@ using(var context = new LojaContext())
 
 ### Relacionamento um para muitos
 * Criar a classe Compra
-``````
+````
 class Compra
     {
         public int Id { get; set; }
@@ -301,11 +301,13 @@ class Compra
         public Produto Produto { get; set; }
         public double Prceco { get; set; }
     }
-``````
+`````
+
 * Na classe lojacontext - Criando a tabela no banco de dados
-``````
+````
 public DbSet<Compra> Compras {get; set;}
-``````
+`````
+
 * Add-Migration Compra
 * Update-Database 
 
@@ -319,42 +321,46 @@ using(var context = new LojaContext())
    
    context.SaveChanges();
 }
-````
+`````
 
 ### Relacionamento muitos para muitos e a classe de join
 * Criar um nova classe promoção
-``````
+````
 public int Id {get; internal set;}
 public string Descriçao {get; internal set;}
 public DateTime DataInicio {get; internal set;}
 public DateTime DataTermino {get; internal set;}
 public IList<PromocaoProduto> Produtos {get; internal set;} // relação muitos para um
-``````
+`````
+
 * Na Tabela produto criou uma lista de Promocacao
-``````
+````
 public int Id {get; set;}
 public string Nome {get; set;}
 public string Categoria {get; set;}
 public IList<PromocaoProduto> Promocoes {get; set;} // classe que eu criei para o relacionamento
-``````
+`````
+
 * Tabela de relacionamento de Produto e Promocao
-``````
+````
 public int ProdutoId {get; set;} // esse id quer dizer que o produto e obrigadorio
 public Produto Produto {get; set;}
 public int PromocaoId {get; set;}
 public Promocao Promocao {get; set;}
-``````
+`````
+
 * LojaContext
-``````
+````
  public DbSet<Promocao> Promocoes { get; set; }
-``````
+`````
+
 * Criando a chave composta da minha classe PromocaoProduto 
-``````
+````
 protected override void OnModelCreating(ModelBuilder modelBuilder){
  modelBuilder.Entity<PromocaoProduto>().HasKey(pp => new { pp.PromocaoId, pp.ProdutoId});
  base.OnModelCreating(modelBuilder);
 }
-``````
+`````
 * Add-Migration Promocao
 
 
