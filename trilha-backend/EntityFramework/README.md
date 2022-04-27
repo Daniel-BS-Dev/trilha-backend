@@ -278,6 +278,50 @@ using(var context = new LojaContext())
 * Add-Migration nome
 * Update-Database 
 
+### Erro tabela there is already an object named 'Produtos'
+
+* Excluir a migração e a tabela criada no banco de dados
+* volta a classe como era antes
+* Add-Migration Inicial
+* Posso atualizar os atributos agora
+* Add-Migration Unidade
+* Comenta a função up da migração Inicial
+* Update-Database Inicial
+* Descomenta o ddl entro da função up
+* Update-Database 
+
+### Relacionamento um para muitos
+* Criar a classe Compra
+``````
+class Compra
+    {
+        public int Id { get; set; }
+        public int Quantidade {get; set;}
+        public int ProdutoId { get; set; }
+        public Produto Produto { get; set; }
+        public double Prceco { get; set; }
+    }
+``````
+* Na classe lojacontext - Criando a tabela no banco de dados
+``````
+public DbSet<Compra> Compras {get; set;}
+``````
+* Add-Migration Compra
+* Update-Database 
+
+### Inserindo objetos relacionados
+
+* Classe principal
+````
+using(var context = new LojaContext())
+{
+   context.Compras.Add(compra);
+   
+   context.SaveChanges();
+}
+````
+
+### Relacionamento muitos para muitos e a classe de join
 
 
 
