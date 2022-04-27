@@ -333,12 +333,25 @@ public DateTime DataTermino {get; internal set;}
 public IList<PromocaoProduto> Produtos {get; internal set;} // relação muitos para um
 `````
 
-* Na Tabela produto criou uma lista de Promocacao
+* Na Tabela produto criou uma lista de Promocao
 ````
 public int Id {get; set;}
 public string Nome {get; set;}
 public string Categoria {get; set;}
 public IList<PromocaoProduto> Promocoes {get; set;} // classe que eu criei para o relacionamento
+
+// construtor
+public Promocao()
+{
+Produtos = new List<PromocaoProduto>();
+}
+
+// medoto criado para adicionar um produto
+public void IncluirProduto(Produto produto){
+  Produtos.Add(new PromocaoProduto() {
+    Produto = produto
+  });
+}
 `````
 
 * Tabela de relacionamento de Produto e Promocao
@@ -361,6 +374,38 @@ protected override void OnModelCreating(ModelBuilder modelBuilder){
 }
 `````
 * Add-Migration Promocao
+* Update-Database  
+
+* Na Class Program
+````
+var p1 = new Produto(){ Nome = "Suco de laranja", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = 2};
+var p2 = new Produto(){ Nome = "Suco de Caju", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = 2};
+var p3 = new Produto(){ Nome = "Suco de Manga", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = 2};
+
+var promocaoDeProduto = new Promocao()
+promocaoDeProduto.Descricao = "Pascoa Feliz";
+promocaoDeProduto.DataInicio = DateTime.Now;
+promocaoDeProduto.DataTermino = DateTime.Now.AddMonths(3);
+
+promocaoDeProduto.IncluiProdito(p1) // metodo que eu vou criar
+promocaoDeProduto.IncluiProdito(p2)
+promocaoDeProduto.IncluiProdito(p3)
+
+// persistindo no banco
+using(var context = new LojaContext()){
+  context.Promocoes.Add(promocaoDeProduto);
+  context.SaveChanges();
+}
+`````
+
+* Excluindo
+````
+using(var context = new LojaContext()){
+  var promocao = context.Promocoes.find(3);
+  context.Promocoes.Remove(promocao);
+  context.SaveChanges();
+}
+`````
 
 
 
