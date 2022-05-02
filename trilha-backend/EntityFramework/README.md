@@ -406,7 +406,61 @@ using(var context = new LojaContext()){
   context.SaveChanges();
 }
 `````
+### Realcionamento um pra um
+* Endereço
+````
+public int Numero { get; internal set;}
+public string Logradouro { get; internal set;}
+public string Complemento { get; internal set;}
+public string Bairro { get; internal set;}
+public string Cidade { get; internal set;}
+public Cliente Cliente { get; internal set;}
+`````
+* Cliente
+````
+public int Id {get; set;}
+public string Nome {get; internal set;}
+public Endereco EnderecoDeEntrega {get; set;}
+`````
+* LojaContext
 
+````
+public DbSet<Cliente> Clientes {get; set;}
+ 
+* No metodo OnModelCreating
+modelBuilder
+ .Entity<Endereco>()
+ .Property<int>("ClientId") // Criando a chave
+ 
+ modelBuilder
+ .Entity<Endereco>()
+ .HasKey("ClieentId"); // tem a chave id na minha tabela
+`````
+
+* Mudando o Nome da Tabela
+````
+modelBuilder
+.Entity<Endereco>()
+.ToTable("Enderecos);
+`````
+
+* Classe Main
+````
+var fulano = new Cliente();
+fulano.Nome = "fulano de tal";
+fulano.EnderecoDeEntrega = new Endereco()
+{
+  Numero = 12,
+  Logaradouro = "Rua dos Invalidos",
+  Complemento = "sobrado",
+  Bairro = "Centro",
+  Cidade = "Cidade"
+};
+using (var contexto = new LojaContext()){
+contexto.clientes.Add(fulano);
+contexto.SaveChanges();
+}
+`````
 
 
 
